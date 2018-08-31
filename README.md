@@ -231,6 +231,7 @@ In addition to trying larger/deeper model, there are a lot of small improvements
 * For now, the questions are independent from each other. To link questions together, a straightforward way would be to feed all previous questions and answer to the encoder before giving the answer. Some caching could be done on the final encoder stated to avoid recomputing it each time. To improve the accuracy, the network should be retrain on entire dialogues instead of just individual QA. Also when feeding the previous dialogue to the encoder, new tokens `<Q>` and `<A>` could be added so the encoder knows when the interlocutor is changing. I'm not sure though that the simple seq2seq model would be sufficient to capture long term dependencies between sentences. Adding a bucket system to group similar input lengths together could greatly improve training speed.
 
 ## Credits
+Credits for this code goes to (https://github.com/llSourcell/chatbot_tutorial). 
 
 Credits for this code goes to [conchylucultor](https://github.com/Conchylicultor/DeepQA). I've merely created a wrapper to get people started. 
 "# ChatBotTFExample" 
